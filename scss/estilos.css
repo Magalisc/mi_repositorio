@@ -28,6 +28,7 @@
 
 footer {
   padding-bottom: 3rem;
+  padding-top: 3rem;
 }
 
 @media (max-width: 700px) {
@@ -98,8 +99,26 @@ nav ul li a {
   height: 100vh;
 }
 
+#body_index {
+  background-image: url("../imagesa/fondo_index.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-color: black;
+}
+
+@media (max-width: 700px) {
+  #body_index {
+    background-image: url("../imagesa/fondo_index.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: black;
+  }
+}
+
 body {
-  background-image: url("../imagesa/indexf_Mesa de trabajo 1.jpg");
+  background-image: url("../imagesa/fondobody.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -124,16 +143,33 @@ h2 {
   margin-top: 8rem;
 }
 
-@media (max-width: 700px) {
+#imagen_inicio {
+  width: 80%;
+  height: 100%;
+}
+
+@media (max-width: 400px) {
   .iniciotexto {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-top: 2em;
+  }
+  #imagen_inicio {
+    width: 100%;
+    height: 100%;
+    margin-bottom: -8em;
   }
 }
 
-#imagen_inicio {
-  height: 15em;
-  width: 55em;
+@media (min-width: 400px) and (max-width: 700px) {
+  .iniciotexto {
+    font-size: 3rem;
+    margin-top: 2em;
+  }
+  #imagen_inicio {
+    width: 100%;
+    height: 100%;
+    margin-bottom: -2em;
+  }
 }
 
 h1 {
@@ -163,11 +199,6 @@ h1 {
   }
 }
 
-#imagen_inicio {
-  width: 80%;
-  height: 100%;
-}
-
 .promof {
   padding: 100px;
   text-align: center;
@@ -181,7 +212,17 @@ h1 {
   text-align: center;
 }
 
-@media (max-width: 680px) {
+@media (max-width: 400px) {
+  .fechas {
+    font-size: 1.9rem;
+    margin-top: 2rem;
+  }
+  .boton_contactanos {
+    margin-bottom: 4rem;
+  }
+}
+
+@media (min-width: 400px) and (max-width: 700px) {
   .fechas {
     font-size: 2.5rem;
     margin-top: 3rem;
@@ -195,26 +236,19 @@ h1 {
   margin-bottom: 1rem;
   padding-top: 10rem;
   margin-left: 2rem;
+  border: none;
 }
 
 #cards #card_1 {
-  background-color: #ff6e1b;
-  font-family: "Druk", sans-serif;
+  background: none;
 }
 
 #cards #card_2 {
-  background-color: #ca1bff;
-  font-family: "Druk", sans-serif;
+  background: none;
 }
 
 #cards #card_3 {
-  background-color: #721bff;
-  font-family: "Druk", sans-serif;
-}
-
-#cards #card_3 a, #cards #card_2 a, #cards #card_1 a {
-  color: black;
-  text-decoration: none;
+  background: none;
 }
 
 #cards #card_1:hover, #cards #card_2:hover, #cards #card_3:hover {
@@ -224,11 +258,24 @@ h1 {
   transition: all .9s ease;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 400px) {
+  #cards img {
+    height: 16rem;
+    width: 16rem;
+    margin-top: 2em;
+    border: none;
+  }
+  #cards {
+    margin: auto;
+  }
+}
+
+@media (min-width: 400px) and (max-width: 700px) {
   #cards img {
     height: 20rem;
     width: 20rem;
     margin-top: 2em;
+    border: none;
   }
   #cards {
     margin: auto;
@@ -238,7 +285,7 @@ h1 {
 #boton_inicio_contacto {
   background-color: #bf61fd;
   color: white;
-  margin-top: -10rem;
+  margin-top: -5rem;
 }
 
 .btn:hover {
@@ -251,22 +298,38 @@ h1 {
 /*  ---------EVENTOS-------- */
 #evento {
   margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
 }
 
 #evento #eventos_tabla {
   margin-top: 2rem;
-  border-radius: 20px;
+  border-radius: 40px;
   font-family: "Lato", sans-serif;
   font-size: 1rem;
   color: white;
+  margin: 3rem;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 400px) {
   #eventos_tabla {
-    font-size: 0.7rem;
+    font-size: 1rem;
     margin-bottom: -4rem;
   }
+}
+
+@media (min-width: 400px) and (max-width: 700px) {
+  #eventos_tabla {
+    font-size: 1rem;
+    margin-bottom: -4rem;
+  }
+}
+
+#tabla {
+  height: 40rem;
+}
+
+#tabla tr:hover {
+  color: #bf61fd;
 }
 
 #carouselExampleIndicators {
@@ -278,9 +341,22 @@ h1 {
   height: 30em;
 }
 
+@media (max-width: 400px) {
+  .carousel-item img {
+    height: 20em;
+  }
+}
+
+@media (min-width: 400px) and (max-width: 700px) {
+  .carousel-item img {
+    height: 25em;
+  }
+}
+
 /*  ---------DISCOGRAFÍA-------- */
 .discografía {
   margin-top: 2rem;
+  margin-bottom: 6rem;
 }
 
 @media (max-width: 700px) {
@@ -306,7 +382,19 @@ h1 {
           justify-content: center;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 400px) {
+  #discos {
+    -ms-grid-columns: 150px 150px;
+        grid-template-columns: 150px 150px;
+        grid-template-areas: "rep1" "rep2" "rep3" "rep4";
+    -ms-grid-rows: 80px 80px;
+        grid-template-rows: 80px 80px;
+    grid-column-gap: 20px;
+    grid-row-gap: 340px;
+  }
+}
+
+@media (min-width: 400px) and (max-width: 700px) {
   #discos {
     -ms-grid-columns: 200px 200px;
         grid-template-columns: 200px 200px;
@@ -361,7 +449,7 @@ h1 {
 /*  ---------BIOGRAFÍA-------- */
 .biog {
   margin-top: 50px;
-  margin-bottom: 2rem;
+  margin-bottom: 6rem;
 }
 
 .bio {
@@ -369,8 +457,9 @@ h1 {
   text-justify: newspaper;
   color: white;
   font-family: "Lato", sans-serif;
-  font-size: 0.89rem;
+  font-size: 1rem;
   margin-top: 1.5rem;
+  word-spacing: 2.5px;
 }
 
 #biografia img {
@@ -379,10 +468,26 @@ h1 {
 }
 
 #biogra {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 400px) {
+  img {
+    height: 100%;
+    width: 100%;
+  }
+  .bio {
+    margin-left: 0rem;
+    font-size: 1em;
+  }
+  .biografia {
+    display: block;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (min-width: 400px) and (max-width: 700px) {
   img {
     height: 100%;
     width: 100%;
@@ -398,10 +503,37 @@ h1 {
   }
 }
 
+#imágenes {
+  margin-bottom: 1rem;
+  padding-top: 10rem;
+  margin-left: 2rem;
+}
+
+#img_1, #img_2, #img_3, #img_4, #img_5, #img_6, #img_7, #img_8 {
+  background: none;
+}
+
+#img_1:hover, #img_2:hover, #img_3:hover, #img_4:hover, #img_5:hover, #img_6:hover, #img_7:hover, #img_8:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  -webkit-transition: all .9s ease;
+  transition: all .9s ease;
+}
+
+@media (max-width: 400px) {
+  #imágenes {
+    margin-bottom: 1rem;
+    padding-top: 4rem;
+    margin-right: 2rem;
+  }
+}
+
 /* ---------CONTACTO-------- */
 .contact {
   margin-top: 2rem;
   margin-bottom: 2rem;
+  font-family: "Druk", sans-serif;
+  color: #bf61fd;
 }
 
 .botones_contacto :hover {
@@ -410,6 +542,7 @@ h1 {
 
 #botones {
   padding-bottom: 4rem;
+  padding-top: 3rem;
 }
 
 #contacto {
@@ -417,8 +550,7 @@ h1 {
 }
 
 .formulario {
-  background-color: #c9b3ff;
-  border-radius: 2em;
+  border: #7050ff;
   padding: 2em;
   margin-bottom: 4em;
 }
