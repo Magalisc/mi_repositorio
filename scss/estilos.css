@@ -103,7 +103,7 @@ nav ul li a {
   background-image: url("../imagesa/fondo_index.png");
   background-position: center center;
   background-repeat: no-repeat;
-  background-attachment: scroll;
+  background-attachment: fixed;
   background-color: black;
 }
 
